@@ -1,5 +1,7 @@
-M = ['-' for i in range(1, 10)] # Создаем поле для игры
-def playing_field():    # Функция для красивого поля
+M = ['-' for i in range(1, 10)]  # Создаем поле для игры
+
+
+def playing_field():   # Функция для красивого поля
     print('   ', 'x', 'y', 'z')
     print('    -----')
     print('x', '|', *M[6:9])
@@ -8,18 +10,16 @@ def playing_field():    # Функция для красивого поля
 
 playing_field()
 
-while True: # Цикл для игры
+while True:  # Цикл для игры
     print('ходит игрок 1')
     a = input('Введите число от 1 до 9 : ')
-    if a not in [str(i) for i in range(1, 10)]: # Проверка, что ввели цифру от 1 до 9
+    if a not in [str(i) for i in range(1, 10)]:  # Проверка, что ввели цифру от 1 до 9
         while a not in [str(i) for i in range(1, 10)]:
             print('Вы ввели не то')
             a = input('Введите число от 1 до 9 : ')
 
-
-    if 'x' not in M[int(a) - 1] and '0' not in M[int(a) - 1]: # Проверка, что поле не занято
+    if 'x' not in M[int(a) - 1] and '0' not in M[int(a) - 1]:  # Проверка, что поле не занято
         M[int(a) - 1] = 'x'
-
     else:
         while True:
             print('занято')
@@ -50,7 +50,7 @@ while True: # Цикл для игры
         while b not in [str(i) for i in range(1, 10)]:
             print('Вы ввели не то')
             b = input('Введите число от 1 до 9 : ')
-    if 'x' not in M[int(b) - 1] and '0' not in M[int(b) - 1]: # Проверка, что поле не занято
+    if 'x' not in M[int(b) - 1] and '0' not in M[int(b) - 1]:  # Проверка, что поле не занято
         M[int(b) - 1] = '0'
 
     else:
