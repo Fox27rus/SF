@@ -2,7 +2,7 @@ import numpy as np
 
 
 def game_core_v3(number):
-    count = 0
+    count = 1
     if 0 < number <= 10:
         predict = 5
     elif 10 < number <= 20:
